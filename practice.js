@@ -179,15 +179,18 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 function removeItem(myGroceryList, item) {
-     return myGroceryList.filter(function(listItem){
-     return listItem !== item;
-   });
- }
+  for (let i = 0; i < myGroceryList.length; i++) {
+    if (myGroceryList[i] === item) {
+      myGroceryList.splice(i, 1)
+    }
+  }
+  return myGroceryList;
+}
 
- function addItem(myGroceryList,item){
-   newArr =  myGroceryList.push(item);
-   return newArr;
- }
+function addItem(myGroceryList, item) {
+  myGroceryList.push(item);
+  return myGroceryList;
+}
 
 
 
@@ -220,7 +223,11 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 function addTen(numbers){
-
+  newArr = [];
+  for(let i = 0; i < numbers.length; i++){
+      newArr.push(Number(numbers[i])+ 10);
+  }
+  return newArr;
 }
 
 
@@ -246,7 +253,13 @@ for(var i = 0; i < num2; i++){
   Return the array which is longest.
 */
 
-//Code Here
+function longer(arr1,arr2){
+  if(arr1.length > arr2.length){
+    return arr1
+  }else {
+    return arr2;
+  }
+}
 
 
 
@@ -258,7 +271,14 @@ for(var i = 0; i < num2; i++){
   Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
 */
 
-//Code Here
+function both(arr1, arr2){
+  let newArray = [];
+  for(let i = 0; i < arr1.length;i++){
+    if(arr1[i]===arr2[i]){
+
+    }
+  }
+}
 
 
 
@@ -299,7 +319,7 @@ var colt = {
 */
 
 //Code Here
-
+devMountainEmployees = [{tyler},{ryan},{colt}];
 
 
 /*
@@ -307,7 +327,12 @@ var colt = {
   Loop through your devMountainEmployees until you find cahlan, then remove him from the array.
 */
 
-//Code Here
+// for(let i = 0; i < devMountainEmployees.length; i++){
+//   if(devMountainEmployees[i] === "calhan"){
+//     devMountainEmployees.splice(index,1);
+//   }
+//   return devMountainEmployees;
+// }
 
 
 
