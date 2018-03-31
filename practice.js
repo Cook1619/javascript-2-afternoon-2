@@ -92,7 +92,7 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 
 function evenFinder(nums){
   evensOnly = [];
-  for(let i = 0; i >nums.length; i ++){
+  for(let i = 0; i < nums.length; i ++){
     if(nums[i] % 2 === 0){
       evensOnly.push(nums[i]);
     }
@@ -274,10 +274,11 @@ function longer(arr1,arr2){
 function both(arr1, arr2){
   let newArray = [];
   for(let i = 0; i < arr1.length;i++){
-    if(arr1[i]===arr2[i]){
-
+    if(arr2.indexOf(arr1[i])!= -1){
+      newArray.push(arr1[i]);
     }
   }
+  return newArray;
 }
 
 
